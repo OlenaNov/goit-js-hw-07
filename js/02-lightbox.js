@@ -12,7 +12,10 @@ const addItems = galleryItems.reduce((acc, { original, preview, description }) =
             />
         </a>`, "");
 
-gallery.insertAdjacentHTML('beforebegin', addItems);
+gallery.insertAdjacentHTML('beforeend', addItems);
 
-console.log(addItems);
+    var lightbox = new SimpleLightbox('.gallery a', { 
+        captionsData: `alt`,
+        animationSpeed:	250,
+});
 
